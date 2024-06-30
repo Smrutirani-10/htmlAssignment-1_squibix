@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT-1 OF input FORM</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="logo.png.jpg" alt="img" height="50px">
+            <p>HAPPINESS FOR HEALTH</p>
+        </div>
+        <a href="#contact">CONTACT NO:XXXXXXX314</a>
+    </nav>
+    
+    <div class="para">
+        <p>Happiness in our daily lives is a crucial element that shapes our overall well-being and quality of 
+        life. It is the essence that colors our everyday experiences, influencing how we perceive and interact 
+        with the world around us. A consistent state of happiness fosters positive relationships, enhances 
+        productivity, and promotes better health. When we are happy, our minds are more resilient to stress 
+        and adversity, allowing us to navigate challenges with a constructive mindset. Simple pleasures, such 
+        as spending time with loved ones, engaging in hobbies, or even savoring a good meal, can significantly 
+        boost our mood and create lasting positive memories. Moreover, happiness is often found in the small, 
+        mindful moments a walk in nature, a kind gesture, or a quiet moment of reflection. These instances 
+        remind us of the beauty and joy inherent in everyday life. Importantly, cultivating happiness involves 
+        a conscious effort to maintain a positive outlook and practice gratitude, which can help shift focus from 
+        what's lacking to what's abundant. Social connections also play a vital role, as human interaction and 
+        support are fundamental to our sense of belonging and happiness. By prioritizing happiness, we not only 
+        improve our own lives but also positively impact those around us, creating a ripple effect of joy and 
+        contentment. Ultimately, happiness in our daily lives is about embracing the present, finding joy in the 
+        ordinary, and nurturing a mindset that appreciates life's simple, yet profound, pleasures.</p>
+    </div>
+    <div id="contact">
+        <form action="javascript:submitForm()" onsubmit="return validate()"> 
+            <label for="name">NAME</label>
+            <input type="text" name="name" id="name" required><br>
+            <label for="mail">EMAIL</label>
+            <input type="email" name="mail" id="mail" required><br>
+            <label for="genre">GENRE</label>
+            <input list="genre" name="genres" id="genres" required>
+            <datalist id="genre">
+                <option value="mental health">
+                <option value="exercise">
+                <option value="effect">
+                <option value="happiness">
+            </datalist><br>
+            <input type="checkbox" name="msg" id="msg">
+            <label for="msg">SUBSCRIBE TO OUR NEWSLETTER VIA EMAIL</label><br>
+            <input type="submit" value="SUBMIT">
+        </form>
+        <script>
+            function validate() {
+                let name = document.getElementById("name")
+                let email = document.getElementById("email")
+                if(name.value.length < 10) {
+                  window.alert("Name must be greater than 10 character");
+                  return false;
+                } 
+                else {
+                  return true;
+                }
+            }
+            function submitForm() {
+                window.alert("Form Submitted")
+              }
+            </script>
+    </div>
+
+    <footer>
+        <p><b>&copy; ALL RIGHTS ARE RESERVED</b></p>
+    </footer>
+</body>
+
+</html>
